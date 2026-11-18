@@ -31,8 +31,6 @@ public class Main {
         // A list of the parent type can hold any child object
         List<Asset> assets = new ArrayList<>();
 
-        Asset asset = new Asset();
-
 
         // Create house objects
         // Money amounts are BigDecimal objects built from a String, so the
@@ -51,6 +49,11 @@ public class Main {
         // the flat 1000.00 also loses the extra 25%
         Vehicle vehicle5 = new Vehicle("Old Truck", "2011-04-20", new BigDecimal("22000.00"), "Chevrolet Silverado", 2009, 180000);
 
+        // Cash
+        Cash mattressMoney = new Cash("Waiting tips", "2026-11-09",
+                new BigDecimal("0"), new BigDecimal("500.00"));
+
+
         // Add assets to the list
         assets.add(house1);
         assets.add(house2);
@@ -59,7 +62,7 @@ public class Main {
         assets.add(vehicle3);
         assets.add(vehicle4);
         assets.add(vehicle5);
-
+        assets.add(mattressMoney);
         // Display asset information
         for (Asset asset : assets) {
             // These getters are defined in Asset, so they work for every item
